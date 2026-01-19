@@ -32,4 +32,4 @@ This project uses **HTML, CSS, Tailwind, and JavaScript** to create a responsive
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/electric-consumption-meter.git
+   git clone [https://github.com/yourusername/electric-consumption-meter.git](https://github.com/Takamichi23/Electric-Consumption-Meter.git)
