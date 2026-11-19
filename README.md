@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Electric Meter Consumption Calculator
 
 A lightweight web application for calculating monthly electricity consumption (kWh) and estimated electricity cost (PHP), complete with input validation, Lottie animations, calculation breakdown, and energy-saving tips.
@@ -55,3 +56,40 @@ Then open the local URL printed in the terminal (typically **http://localhost:30
 - **Previous Reading (kWh):** Positive number, up to 5 digits
 - **Current Reading (kWh):** Positive number greater than or equal to the previous reading, up to 5 digits
 - **Cost per kWh (PHP):** Positive number (e.g., `12.50`)
+=======
+# Electric Consumption Meter ⚡📊
+
+A **web-based electric consumption meter** designed to help users track and calculate their electricity usage efficiently.  
+
+This project uses **HTML, CSS, Tailwind, and JavaScript** to create a responsive and interactive interface.  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Styling:** Tailwind CSS  
+- **Responsive Design:** Works across desktop, tablet, and mobile  
+
+---
+
+## ⚡ Features
+
+- Input your electricity usage and rate to calculate monthly consumption cost  
+- Dynamic calculations using JavaScript  
+- Clean and modern UI with Tailwind CSS  
+- Responsive layout for all devices  
+- Easy-to-use and intuitive interface  
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Edge, Safari)  
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/yourusername/electric-consumption-meter.git](https://github.com/Takamichi23/Electric-Consumption-Meter.git)
+>>>>>>> origin/main

@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(130deg, #DEE4FA 14.55%, #5B78DF 79.57%);
+}
+
+.left-wrapper {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: left;
+    flex: 0.8;
+    height: 75vh; 
+}
+
+.header {
+    width: 500px;
+    position: relative; 
+    z-index: 1;
+    margin: 0 auto; 
+}
+
+
+.upper-text {
+    color: #DF735B;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-weight: 700;
+    margin-left: 0; 
+    text-align: left; 
+}
+
+.bottom-text {
+    width: 85%;
+    color: #1B1F2F;
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0; 
+    text-align: left; 
+}
+
+.bottom-gif {
+    position: absolute;
+    bottom: -17rem;
+    right: -3rem;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+
+
+.right-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 2rem;
+}
+
+form {
+    row-gap: 15px;
+    width: 100%;
+    max-width: 479px;
+    display: flex;
+    flex-direction: column;
+    background: transparent; /* Keeps text visible */
+}
+
+label {
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    word-wrap: break-word
+}
+
+.button-text{
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    word-wrap: break-word
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+}
+
+.divider{
+    background-color: rgba(201, 201, 201, 0.2); 
+    width: 693px;
+    height: 1px;
+    margin-left: -6.8rem;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    background: #DF735B;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #DF735B;
+}
+ww
