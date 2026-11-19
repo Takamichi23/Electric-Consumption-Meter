@@ -1,0 +1,330 @@
+/* Base Background */
+body {
+    margin: 0;
+    background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+#bgAndContent {
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Tilt Animations */
+@keyframes tiltAnimation {
+    0% {
+        transform: rotate(-10.5deg);
+    }
+    100% {
+        transform: rotate(25deg);
+    }
+}
+
+@keyframes tiltLeftAnimation {
+    0% {
+        transform: rotate(25deg);
+    }
+    100% {
+        translate: -52.3% -50%;
+        transform: rotate(-10.5deg);
+    }
+}
+
+#bgRow {
+    margin: auto;
+    z-index: 0;
+    height: 200%;
+    width: 220%;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform-origin: center;
+    translate: -55.5% -50%;
+    animation: tiltAnimation 1s ease-out forwards;
+}
+
+#bgSecondhalf {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#contentRow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    min-height: 100vh;
+    z-index: 10;
+}
+
+/* Left Content: Cat Animation */
+#catGifContent {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.catGifWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+dotlottie-player {
+    width: 500px;
+    height: 500px;
+}
+
+/* Right Content: Summary & Tips */
+#answerContent {
+    margin: auto;
+    padding: 4% 5%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.summaryDiv {
+    margin: auto;
+    width: 100%;
+    max-width: 550px;
+}
+
+.form-group {
+    background-color: #DEE4FA;
+    border-radius: 25px;
+    padding: 25px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(27, 31, 47, 0.18);
+}
+
+.form-group label,
+.form-group input {
+    display: block;
+    width: 100%;
+    transition: font-size 0.3s ease;
+}
+
+label {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.3;
+    color: #1B1F2F;
+}
+
+#monthlyconsump,
+#totalcost {
+    font-family: "Hepta Slab", serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 1.3;
+    color: #DF735B;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+/* Calculation Breakdown Drawer */
+.calc-details {
+    background-color: rgba(27, 31, 47, 0.45);
+    border-radius: 14px;
+    padding: 14px 20px;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.calc-details summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    color: #DEE4FA;
+    user-select: none;
+}
+
+.breakdown-list {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.display2 {
+    margin: 0;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: white;
+    line-height: 1.35;
+    text-align: start;
+}
+
+.tips-list {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+#sayonara {
+    margin: auto;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    background-color: #DF735B;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+#sayonara:hover {
+    background-color: #ad5d4a;
+}
+
+#sayonara:active {
+    background-color: #6b372a;
+}
+
+/* Thank You Screen */
+#thankyouScreen {
+    margin: auto;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+#thankyouTxt {
+    padding-top: 10%;
+    font-family: "Hepta Slab", serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: #DF735B;
+    text-align: center;
+    width: 1000px;
+    text-shadow:
+        3px 3px 0px rgba(0, 0, 0, 0.2),
+        6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+#catscratchWrapper {
+    width: 700px;
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+}
+
+#catscratchWrapper dotlottie-player {
+    width: 650px;
+    height: 650px;
+    transform: translateY(22.5%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 920px) {
+    #thankyouTxt {
+        font-size: 50px !important;
+        width: 100%;
+    }
+
+    #catscratchWrapper {
+        width: 500px;
+        height: 500px;
+    }
+
+    #catscratchWrapper dotlottie-player {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 800px) {
+    label {
+        font-size: 22px;
+    }
+
+    #monthlyconsump,
+    #totalcost {
+        font-size: 30px;
+    }
+
+    .display2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    #catGifContent,
+    .catGifWrapper,
+    dotlottie-player {
+        height: 180px;
+    }
+
+    #bgRow {
+        height: 300%;
+        width: 300%;
+    }
+}
+
+@media (max-width: 565px) {
+    #bgRow {
+        top: 36%;
+    }
+}
+
+@media (max-width: 550px) {
+    #thankyouScreen {
+        align-items: center;
+    }
+
+    #thankyouTxt {
+        font-size: 30px !important;
+    }
+
+    #catscratchWrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    #catscratchWrapper dotlottie-player {
+        width: 280px;
+        height: 280px;
+    }
+}

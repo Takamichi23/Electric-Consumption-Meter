@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Meter Consumption Calculator</title>
+    <link rel="stylesheet" href="First.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head> 
+
+<body> 
+    <!--Main Page -->
+    <div class="page">
+        <div class="left-wrapper">
+
+            <div class="header">
+                <div class="upper-text">
+                    <h1 style="font-size: 48px;">Track Your Electricity Usage</h1>
+                </div>
+ 
+                <div class="bottom-text">
+                    <p>Monitor your electricity consumption to save energy and reduce costs.</p>
+                </div>
+            </div>
+
+            <div class="bottom-gif">
+                <dotlottie-player src="https://lottie.host/4551c720-fcd0-46e8-a0aa-bbd0c1f31b99/O8WqkjqcXL.lottie"
+                    background="transparent" speed="1" style="width: 500px; height: 500px" loop
+                    autoplay></dotlottie-player>
+            </div>
+
+        </div>
+
+        <!--Transparent Wrapper-->
+        <div class="right-wrapper">
+
+            <form>
+                <label>Meter Number</label>
+                <input type="text" placeholder="Enter the meter number"  required>
+
+                <div class="divider"></div>
+
+                <label>Previous Reading</label>
+                <input type="number" placeholder="Enter the previous reading" step="any" required>
+
+                <label>Current Reading</label>
+                <input type="number" placeholder="Enter the current reading" step="any" required>
+
+                <label>Cost</label>
+                <input type="number" placeholder="Enter the cost per kwh" step="any" required>
+
+                <div class="divider"></div>
+
+                <a href="loading.html">
+                    <button type="button">
+                        <h1 class="button-text">Calculate!</h1>
+                    </button>
+                </a>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+</html>

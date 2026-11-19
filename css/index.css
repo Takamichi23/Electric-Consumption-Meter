@@ -1,0 +1,253 @@
+/* Base Layout */
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+#row {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* First Half: Intro & Windmill Animation */
+#firsthalf {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#txtheader {
+    font-family: "Hepta Slab", serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.25;
+    color: #DF735B;
+    margin: 0 auto;
+}
+
+#txtdesc {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.35;
+    color: #1B1F2F;
+    margin: 5% auto 0;
+}
+
+/* Cropped Windmill Animation */
+.animation-wrapper {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    width: 200px;
+    height: 230px;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.animation-wrapper dotlottie-player {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: -100px;
+    left: -150px;
+}
+
+/* Second Half: Form */
+#secondhalf {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    height: 2px;
+    color: white;
+    opacity: 0.4;
+}
+
+label {
+    display: block;
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+form {
+    margin: auto;
+    width: 100%;
+    max-width: 700px;
+}
+
+input {
+    padding: 10px 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 3px solid #DF735B;
+}
+
+.form-group {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-text {
+    display: block;
+    color: #ff6b6b;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 6px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#btn {
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    padding: 12px;
+    background-color: #DF735B;
+    width: 100%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+#btn:hover {
+    background-color: #ad5d4a;
+}
+
+#btn:active {
+    background-color: #6b372a;
+}
+
+/* Loading Screen Overlay */
+#loadingscreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+@keyframes tiltAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        translate: -47% -50%;
+        transform: rotate(-10.5deg);
+    }
+}
+
+#loadingscreen .row {
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    top: 50%;
+    left: 59.2%;
+    transform-origin: center;
+    translate: -50% -50%;
+    animation: tiltAnimation 1s ease-out forwards;
+}
+
+#loadingSecondhalf {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#loadingText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#calculatingtxt {
+    font-family: "Hepta Slab", serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: #DF735B;
+    text-align: center;
+    text-shadow:
+        3px 3px 0px rgba(0, 0, 0, 0.2),
+        6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.animation-wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 920px) {
+    #txtheader {
+        font-size: 36px;
+    }
+
+    #txtdesc {
+        font-size: 22px;
+    }
+
+    #calculatingtxt {
+        font-size: 50px;
+    }
+
+    .animation-wrapper2 dotlottie-player {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .animation-wrapper {
+        display: none;
+    }
+
+    .form-group {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 550px) {
+    #calculatingtxt {
+        font-size: 35px;
+    }
+
+    .animation-wrapper2 dotlottie-player {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
